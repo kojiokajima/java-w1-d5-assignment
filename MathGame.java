@@ -1,4 +1,4 @@
-// Koji and Eduardo
+//Eduardo and Koji
 
 import java.lang.Math;
 import java.util.Scanner;
@@ -42,7 +42,7 @@ public class MathGame {
                     player = 1;
                 }
             } while (player1Lives > 0 && player2Lives > 0);
-            
+
             if (player1Lives == 0) {
                 System.out.println("Player 2 wins!");
             } else {
