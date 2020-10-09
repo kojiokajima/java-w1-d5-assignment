@@ -18,27 +18,31 @@ public class MathGame {
             System.out.println("You each have 3 lives");
 
             do {
-                int num1 = (int)(Math.random() * 101);
-                int num2 = (int)(Math.random() * 101);
+                int num1 = (int) (Math.random() * 101);
+                int num2 = (int) (Math.random() * 101);
 
                 System.out.println("The lives: Player 1: " + player1Lives + "/3 Player 2: " + player2Lives + "/3");
                 System.out.println("Player " + player + ": what is " + num1 + " + " + num2);
                 answer = input.nextInt();
+
                 if (answer == num1 + num2) {
                     System.out.println("Correct!");
                 } else {
-                    if(player == 1){
+                    if (player == 1) {
+                        System.out.println("Incorrect! The answer was " + (num1 + num2));
                         player2Lives--;
-                    }else{
+                    } else {
+                        System.out.println("Incorrect! The answer was " + (num1 + num2));
                         player1Lives--;
                     }
                 }
-                if(player == 1){
-                    player=2;
-                }else{
-                    player=1;
+                if (player == 1) {
+                    player = 2;
+                } else {
+                    player = 1;
                 }
-            } while(player1Lives > 0 && player2Lives > 0);
+            } while (player1Lives > 0 && player2Lives > 0);
+            
             if (player1Lives == 0) {
                 System.out.println("Player 2 wins!");
             } else {
