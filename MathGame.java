@@ -21,10 +21,9 @@ public class MathGame {
                 int num1 = (int) (Math.random() * 101);
                 int num2 = (int) (Math.random() * 101);
 
-                System.out.println("The lives: Player 1: " + player1Lives + "/3 Player 2: " + player2Lives + "/3");
                 System.out.println("Player " + player + ": what is " + num1 + " + " + num2);
                 answer = input.nextInt();
-
+                
                 if (answer == num1 + num2) {
                     System.out.println("Correct!");
                 } else {
@@ -36,6 +35,7 @@ public class MathGame {
                         player1Lives--;
                     }
                 }
+                System.out.println("The lives: Player 1: " + player1Lives + "/3 Player 2: " + player2Lives + "/3");
                 if (player == 1) {
                     player = 2;
                 } else {
